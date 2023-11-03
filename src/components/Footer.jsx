@@ -19,7 +19,7 @@ export default function Footer() {
           <div className="flex gap-4 items-end">
             <a href="#">
               <svg
-                className="w-[23px] sm:w-7"
+                className="w-[23px] sm:w-7 hover:scale-90 transition-colors duration-500"
                 width="45"
                 height="45"
                 viewBox="0 0 250 251"
@@ -47,7 +47,7 @@ export default function Footer() {
             </a>
             <a href="#">
               <svg
-                className="w-[23px] sm:w-7"
+                className="w-[23px] sm:w-7 hover:scale-90 transition-colors duration-500"
                 width="45"
                 height="45"
                 viewBox="0 0 250 250"
@@ -77,7 +77,7 @@ export default function Footer() {
             </a>
           </div>
         </section>
-        <section className="grid md:grid-cols-[2fr_1fr_1fr] lg:grid-cols-[2fr_1fr_1fr_1fr] md:gap-y-10 mt-12">
+        <section className="grid md:grid-cols-[2fr_1fr_1fr] lg:grid-cols-[2fr_1fr_1fr_1fr] md:gap-y-10 mt-7 md:mt-12">
           <div className="mt-1">
             <h3 className="font-bold hidden md:block mb-6">ONS BEDRIJF</h3>
             <ul className="text-sm lg:text-base  space-y-5 md:space-y-6">
@@ -108,13 +108,18 @@ export default function Footer() {
                 />
                 <p>Peter: +32 477 46 25 38</p>
               </li>
-              <li className="flex items-center gap-2">
-                <img
-                  className="w-5 lg:w-[1.5625rem] h-auto"
-                  src={mailIcon}
-                  alt="icon"
-                />
-                <p>info@extremadeals.com</p>
+              <li>
+                <a
+                  href="mailto:info@extremadeals.com"
+                  className="flex items-center gap-2"
+                >
+                  <img
+                    className="w-5 lg:w-[1.5625rem] h-auto"
+                    src={mailIcon}
+                    alt="icon"
+                  />
+                  <p>info@extremadeals.com</p>
+                </a>
               </li>
             </ul>
           </div>

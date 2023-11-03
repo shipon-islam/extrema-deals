@@ -5,9 +5,9 @@ import YellowButton from "../../../components/YellowButton";
 
 export default function CTABar() {
   return (
-    <section className="cta-banner-bg">
-      <div className="grid grid-cols-4 gap-x-4">
-        <div className="cta-diamond-shape relative">
+    <section className="cta-banner-bg hidden lg:block">
+      <div className="grid grid-cols-[2fr_1fr_1fr_2fr] gap-x-4">
+        <div className="cta-diamond-shape relative max-w-[345.269px] h-auto">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <img className="w-10" src={handShakeIcon} alt="icon" />
             <h3 className="text-primary-white">WAT WIJ BIEDEN</h3>
