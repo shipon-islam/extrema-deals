@@ -23,7 +23,7 @@ export default function Navbar() {
         <Link to="/" className="h-2/5 md:h-3/5 cursor-pointer">
           <img
             src={extremadealsLogo}
-            alt="ExtremaDeals Logo Yellow"
+            alt="ExtremaDealsLogo"
             className="w-[90px] md:h-full md:w-auto"
           />
         </Link>

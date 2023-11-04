@@ -38,6 +38,9 @@
   .cta-card-text {
     @apply text-sm;
   }
+  .section-container {
+    @apply max-w-[1536px] mx-auto;
+  }
 }
 .hero-banner {
   background: linear-gradient(
@@ -46,6 +49,18 @@
       rgba(31, 34, 40, 0.5)
     ),
     url("./assets/img/homebanner-placeholder.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+.diensten-hero-banner {
+  background: linear-gradient(
+      0deg,
+      rgba(31, 34, 40, 0.5),
+      rgba(31, 34, 40, 0.5)
+    ),
+    url("./assets/img/dienstenbanner-placeholder.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

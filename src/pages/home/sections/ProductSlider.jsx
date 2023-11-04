@@ -18,7 +18,7 @@ export default function ProductSlider() {
           DEALS IN DE KIJKER
         </h1>
         <div className="relative h-[18.5rem] sm:h-[25rem] md:h-[38rem] lg:h-[50rem] w-full overflow-hidden">
-          <div className="">
+          <div>
             <SliderItems />
           </div>
 

@@ -48,7 +48,10 @@ export default function CTABarSmDevices({ ctaDetails }) {
           </div>
         </div>
         <div>
-          <p ref={ctaTextRef} className="text-sm sm:text-lg font-roboto p-2">
+          <p
+            ref={ctaTextRef}
+            className="text-[14.5px] sm:text-lg font-roboto p-2"
+          >
             {ctaDetails[0]?.para_text}
           </p>
         </div>
