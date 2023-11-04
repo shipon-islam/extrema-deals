@@ -82,32 +82,47 @@ export default function Footer() {
             <div className="mt-1">
               <h3 className="font-bold hidden md:block mb-6">ONS BEDRIJF</h3>
               <ul className="text-sm lg:text-base  space-y-5 md:space-y-6">
-                <li className="flex items-center gap-2">
-                  <img
-                    className="w-5 lg:w-[1.5625rem] h-auto"
-                    src={locationIcon}
-                    alt="icon"
-                  />
-                  <p>
-                    Zevenputtenstraat 7, 3690 <br />
-                    Zutendaal, Limburg Belgie
-                  </p>
+                <li>
+                  <a
+                    href="https://www.google.com/maps?q=zutendaal,belgium"
+                    className="flex items-center gap-2"
+                  >
+                    <img
+                      className="w-5 lg:w-[1.5625rem] h-auto"
+                      src={locationIcon}
+                      alt="icon"
+                    />
+                    <p>
+                      Zevenputtenstraat 7, 3690 <br />
+                      Zutendaal, Limburg Belgie
+                    </p>
+                  </a>
                 </li>
-                <li className="flex items-center gap-2">
-                  <img
-                    className="w-5 lg:w-[1.5625rem] h-auto"
-                    src={whatsappIcon}
-                    alt="icon"
-                  />
-                  <p>John: +32 468 12 65 99</p>
+                <li>
+                  <a
+                    href="tel:+32 468 12 65 99"
+                    className="flex items-center gap-2"
+                  >
+                    <img
+                      className="w-5 lg:w-[1.5625rem] h-auto"
+                      src={whatsappIcon}
+                      alt="icon"
+                    />
+                    <p>John: +32 468 12 65 99</p>
+                  </a>
                 </li>
-                <li className="flex items-center gap-2">
-                  <img
-                    className="w-5 lg:w-[1.5625rem] h-auto"
-                    src={whatsappIcon}
-                    alt="icon"
-                  />
-                  <p>Peter: +32 477 46 25 38</p>
+                <li>
+                  <a
+                    href="tel:+32 477 46 25 38"
+                    className="flex items-center gap-2"
+                  >
+                    <img
+                      className="w-5 lg:w-[1.5625rem] h-auto"
+                      src={whatsappIcon}
+                      alt="icon"
+                    />
+                    <p>Peter: +32 477 46 25 38</p>
+                  </a>
                 </li>
                 <li>
                   <a
