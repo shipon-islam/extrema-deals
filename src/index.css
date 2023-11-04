@@ -27,6 +27,17 @@
   .hamburger-btn.active span:nth-child(3) {
     transform: rotateZ(405deg) translate(-8px, -6px);
   }
+  .cta-card-wraper {
+    @apply pt-8 xl:pt-12 px-3 xl:px-6 pb-8 space-y-6 h-full;
+  }
+  .cta-card-head {
+    @apply font-bold;
+  }
+  .cta-card-icon {
+  }
+  .cta-card-text {
+    @apply text-sm;
+  }
 }
 .hero-banner {
   background: linear-gradient(
@@ -52,7 +63,6 @@
   background-image: url("./assets/svg/cta-bar-diamond-bg.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
 }
 .cta-card-gadient {
   background: linear-gradient(
@@ -65,12 +75,6 @@
 .react-clip-path {
   clip-path: polygon(56% 0, 100% 50%, 57% 100%, 0% 100%, 0 51%, 0% 0%);
 }
-.swiper-pagination-bullet {
-  background-color: transparent;
-  border: 4px solid #fdc814 !important;
-  width: 15px;
-  height: 15px;
-}
-.swiper-pagination-bullet-active {
-  background-color: #fdc814;
+.react-clip-path2 {
+  clip-path: polygon(0 0, 65% 0, 100% 50%, 75% 100%, 0 100%, 0% 50%);
 }

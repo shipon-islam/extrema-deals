@@ -14,7 +14,9 @@ export default function Navbar() {
   return (
     <header
       className={`${
-        isShowMobileMenu ? "bg-primary-yellow" : "bg-navbar-gradient"
+        isShowMobileMenu
+          ? "bg-primary-yellow fixed lg:static left-0 z-[100] w-full"
+          : "bg-navbar-gradient"
       } lg:bg-navbar-gradient h-20 lg:h-24 transition-colors duration-300`}
     >
       <nav className="max-w-[1536px] mx-auto px-8 lg:px-12 flex items-center justify-between h-full">

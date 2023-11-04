@@ -14,6 +14,20 @@ function SliderItems() {
     {
       url: camera2,
     },
+    {
+      url: camera1,
+    },
+
+    {
+      url: camera2,
+    },
+    {
+      url: camera1,
+    },
+
+    {
+      url: camera2,
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -66,7 +80,7 @@ function SliderItems() {
       {/* image slider end */}
 
       {/* slider indicator start */}
-      <div className="flex gap-x-1 bottom-1/2  md:-translate-x-[19.2rem] lg:-translate-x-[28rem] xl:-translate-x-[34rem] translate-y-[5rem]  sm:translate-y-[10rem] md:translate-y-[6rem] lg:translate-y-[4.5rem] xl:translate-y-[2rem] justify-center py-2 absolute left-1/2 md:rotate-[49deg]">
+      <div className="flex gap-x-1 bottom-1/2  md:-translate-x-[21.7rem] lg:-translate-x-[28rem] xl:-translate-x-[35rem] translate-y-[5rem]  sm:translate-y-[10rem] md:translate-y-[6rem] lg:translate-y-[6rem] xl:translate-y-[3rem] justify-center py-2 absolute left-1/2 md:rotate-[49deg]">
         {slides.map((slide, slideIndex) => (
           <div
             key={slideIndex}
@@ -75,7 +89,7 @@ function SliderItems() {
               currentIndex === slideIndex
                 ? "bg-primary-yellow md:bg-primary-black"
                 : "bg-transparent"
-            } text-2xl cursor-pointer border-2 border-primary-yellow md:border-primary-black rounded-full w-4 h-4`}
+            } text-2xl cursor-pointer border-2 border-primary-yellow md:border-primary-black rounded-full w-3 h-3 md:w-4 md:h-4`}
           ></div>
         ))}
       </div>
