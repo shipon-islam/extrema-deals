@@ -49,7 +49,7 @@ function SliderItems() {
   };
 
   return (
-    <div className="relative h-full section-container">
+    <div className="relative h-full xl:max-w-[1536px] xl:mx-auto">
       {/* arrow start*/}
       <div className="flex justify-between absolute w-full top-[3rem] sm:top-[5rem] z-10 lg:top-[15rem] left-0 md:px-8 lg:px-12 xl:px-16">
         <button className="md:bg-primary-black hover:text-primary-yellow md:hover:bg-primary-black/80 transition-colors duration-300 md:text-primary-yellow rounded-md pl-3">
