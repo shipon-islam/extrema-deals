@@ -65,7 +65,6 @@ export default function FAQ() {
       singleFaq.firstChild.lastChild.firstChild.classList.add("hidden");
       singleFaq.firstChild.lastChild.lastChild.classList.remove("hidden");
     }
-
     collapesAbleItem.classList.remove("hidden");
     arrowDownBtn.classList.remove("hidden");
     arrowUpBtn.classList.add("hidden");
