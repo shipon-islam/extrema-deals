@@ -41,6 +41,9 @@
   .section-container {
     @apply max-w-[1536px] mx-auto;
   }
+  .input-class {
+    @apply border-2 border-primary-yellow mt-4 w-full h-10 rounded-xl focus:outline-none pl-4 py-1 shadow-lg shadow-black/20 text-black;
+  }
 }
 .hero-banner {
   background: linear-gradient(
@@ -86,10 +89,4 @@
     #1f2328 28.95%,
     #272c2f 70.43%
   );
-}
-.react-clip-path {
-  clip-path: polygon(56% 0, 100% 50%, 57% 100%, 0% 100%, 0 51%, 0% 0%);
-}
-.react-clip-path2 {
-  clip-path: polygon(0 0, 65% 0, 100% 50%, 75% 100%, 0 100%, 0% 50%);
 }

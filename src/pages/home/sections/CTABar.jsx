@@ -73,7 +73,13 @@ export default function CTABar() {
             </div>
           </div>
           <div className="m-1.5">
-            <div className="cta-card-gadient cta-card-wraper react-clip-path2 ">
+            <div
+              style={{
+                clipPath:
+                  "polygon(0 0, 65% 0, 100% 50%, 75% 100%, 0 100%, 0% 50%)",
+              }}
+              className="cta-card-gadient cta-card-wraper react-clip-path2 "
+            >
               <h1 className="cta-card-head">DEALS</h1>
               <svg
                 className="fill-white cta-card-icon"
