@@ -28,21 +28,22 @@
     transform: rotateZ(405deg) translate(-8px, -6px);
   }
   .cta-card-wraper {
-    @apply pt-8 xl:pt-12 px-3 xl:px-6 pb-8 space-y-6 h-full;
+    @apply pb-5 px-4 pt-6 xl:pt-8;
   }
   .cta-card-head {
-    @apply font-bold;
+    @apply font-bold text-[1.1rem] xl:text-[1.125rem];
   }
   .cta-card-icon {
+    @apply mt-4 xl:my-6;
   }
   .cta-card-text {
-    @apply text-sm;
+    @apply text-[11px] xl:text-[0.8125rem] font-roboto leading-5 my-4 xl:my-6;
   }
   .section-container {
     @apply max-w-[1536px] mx-auto;
   }
   .input-class {
-    @apply border-2 border-primary-yellow mt-4 w-full h-10 rounded-xl focus:outline-none pl-4 py-1 shadow-lg shadow-black/20 text-black;
+    @apply border-2 border-primary-yellow mt-4 lg:mt-6 w-full h-10 rounded-xl focus:outline-none pl-4 py-1 shadow-lg shadow-black/20 text-black;
   }
 }
 .hero-banner {
@@ -75,7 +76,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 400px;
 }
 .cta-diamond-shape {
   background-image: url("./assets/svg/cta-bar-diamond-bg.svg");

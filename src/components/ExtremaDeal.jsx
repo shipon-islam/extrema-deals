@@ -1,4 +1,3 @@
-import React from "react";
 import blackLocation from "../assets/svg/location-icon-black-gradient.svg";
 import GradientLocationIcon from "../assets/svg/location-icon-yellow-gradient.svg";
 import blackEMail from "../assets/svg/mail-icon-black-gradient.svg";

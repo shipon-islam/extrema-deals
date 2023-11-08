@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import ContactForm from "../../../components/ContactForm";
 import ExtremaDeal from "../../../components/ExtremaDeal";
 import FollowUs from "../../../components/FollowUs";
@@ -45,7 +45,7 @@ export default function MuliScreenForMobile() {
       </ul>
       <ul
         style={{ boxShadow: "2px 0px 4px #ddd" }}
-        className="flex justify-center text-[0.9rem] text-center bg-secondary-black  mt-4"
+        className="flex justify-center text-[0.8rem] sm:text-[0.9rem] text-center bg-secondary-black  mt-4"
       >
         <li
           onClick={handlePageChnager}

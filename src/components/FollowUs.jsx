@@ -1,4 +1,3 @@
-import React from "react";
 import blackGradientFacebook from "../assets/svg/facebook-icon-black-gradient.svg";
 import yellowGradientFacebook from "../assets/svg/facebook-icon-yellow-gradient.svg";
 import blackGradientInstagram from "../assets/svg/instagram-icon-black-gradient.svg";

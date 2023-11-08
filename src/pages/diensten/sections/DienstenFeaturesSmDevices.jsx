@@ -1,5 +1,5 @@
-import React from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { Link } from "react-router-dom";
 import cashback_black_icon from "../../../assets/svg/hand-holding-cashbag-buyup-icon-black.svg";
 import houseClearance from "../../../assets/svg/house-clearance-icon-white.svg";
 
@@ -32,23 +32,42 @@ export default function DienstenFeaturesSmDevices() {
               alt="cashback-icon"
             />
           </div>
-          <div className="px-6 pb-24 hidden">
+          <div className="px-6 pb-24 hidden font-roboto text-primary-black text-center">
             <p>
-              Iedereen heeft wel iets in huis of bedrijf dat niet meer gebruikt
-              wordt, maar nog te waardevol is om weg te gooien. Of misschien sta
-              je op het punt om een grote schoonmaak te houden, of moet je
-              bedrijf helaas zijn deuren sluiten. Wat de reden ook is, wij zijn
-              hier om het proces makkelijker te maken. Bij ExtremaDeals geloven
-              we in het potentieel van elk item, groot of klein. Wij kopen uw
-              spullen op, of het nu gaat om individuele items, een complete
-              inboedel , bedrijfsvoorraden, of voorraden uit faillissementen.
-              Ons deskundige team evalueert de waarde zorgvuldig en biedt een
+              Iedereen heeft wel iets in huis of binnen het bedrijf dat niet
+              meer gebruikt wordt, maar nog te waardevol is om weg te gooien.
+              Misschien sta je op het punt om een grote schoonmaak te houden, of
+              moet je bedrijf helaas zijn deuren sluiten. Wat de reden ook is,
+              wij zijn hier om het proces te vereenvoudigen. Bij Extrema Deals
+              zien we het potentieel van elk item, groot of klein. Wij kopen
+              jouw spullen op, of het nu gaat om individuele items, een complete
+              inboedel, bedrijfsvoorraden, of voorraden uit faillissementen. Ons
+              deskundige team evalueert de waarde zorgvuldig en biedt een
               eerlijke prijs. Laat overbodige items geen stof verzamelen;
               verkoop ze aan ons en maak winst.
             </p>
-            <button className="bg-gradient-to-b from-primary-gray to-primary-black shadow-md text-center no-underline whitespace-nowrap cursor-pointer font-primary text-primary-white text-base font-extrabold tracking-widest uppercase rounded-md border-0 px-4 py-3 hover:from-primary-gray hover:to-primary-gray active:scale-95 transition-colors duration-500 active:duration-200 absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
-              BIED AAN & VERDIEN
-            </button>
+            <p className="py-10">
+              Heb je iets aan te bieden? Neem dan gerust contact met ons op.
+              Bel, stuur of WhatsApp ons de details via{" "}
+              <a href="tel:+32 468 12 65 99">
+                <span className="font-medium underline hover:text-secondary-black">
+                  John: +32 468 12 65 99
+                </span>
+              </a>{" "}
+              of{" "}
+              <a href="tel:+32 477 46 25 38">
+                <span className="font-medium underline hover:text-secondary-black">
+                  Peter: +32 477 46 25 38
+                </span>
+              </a>
+              . Je kunt ook via de onderstaande knop het bijhorend formulier
+              invullen.
+            </p>
+            <Link to="/diensten/opkopen-form">
+              <button className="bg-gradient-to-b from-primary-gray to-primary-black shadow-md text-center no-underline whitespace-nowrap cursor-pointer font-primary text-primary-white text-base font-extrabold tracking-widest uppercase rounded-md border-0 px-4 py-3 hover:from-primary-gray hover:to-primary-gray active:scale-95 transition-colors duration-500 active:duration-200 absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
+                BIED AAN & VERDIEN
+              </button>
+            </Link>
           </div>
         </li>
         <li className="bg-primary-black text-white rounded-3xl relative">
@@ -63,26 +82,46 @@ export default function DienstenFeaturesSmDevices() {
             <h5 className="text-xl font-bold">ONTRUIMING</h5>
             <img className="w-14" src={houseClearance} alt="house clearange" />
           </div>
-          <div className="px-6 pb-24 hidden ">
+          <div className="px-6 pb-24 hidden font-roboto text-primary-white text-center">
             <p>
-              Een nieuw hoofdstuk begint met een lege pagina. Laat het leegmaken
-              van je woning, van vloer tot plafond, met vertrouwen aan ons over.
-              Als uw betrouwbare partner zorgen wij voor een efficiënte en
-              professionele ontruiming. Onze doelgerichte aanpak zorgt ervoor
-              dat items die nog van waarde zijn een tweede leven krijgen in onze
-              shop. Wat niet meer bruikbaar is, wordt op een milieuvriendelijke
-              manier gerecycled of verwerkt. Terwijl jij je op de toekomst
-              richt, gaan wij respectvol om met wat achterblijft. Kies voor een
-              woningontruiming die niet alleen zorg draagt voor uw huis, maar
-              ook voor het milieu en de circulaire economie. Kies voor een
-              ontruiming met toegevoegde waarde.
+              Een nieuw hoofdstuk begint met een lege pagina. Vertrouw op
+              Extrema Deals voor een professionele ontruiming van je woning, van
+              vloer tot plafond. Als je betrouwbare partner, bieden wij een
+              efficiënte en zorgvuldige ontruimingsdienst aan. Onze doelgerichte
+              aanpak zorgt ervoor dat waardevolle items een tweede leven krijgen
+              in onze shop, terwijl het onbruikbare op een milieuvriendelijke
+              wijze wordt gerecycled of verwerkt. Terwijl jij je richt op de
+              toekomst, behandelen wij met respect wat achterblijft. Kies voor
+              een woningontruiming die niet alleen zorg draagt voor je woning,
+              maar ook bijdraagt aan het milieu en de circulaire economie. Kies
+              voor een ontruiming met toegevoegde waarde.
             </p>
-            <button
-              className="bg-gradient-to-b from-secondary-yellow to-primary-yellow shadow-md text-center no-underline whitespace-nowrap cursor-pointer font-primary text-primary-black text-base font-extrabold tracking-widest uppercase rounded-md border-0 px-4 py-3 hover:from-secondary-yellow hover:to-secondary-yellow active:scale-95 transition-colors duration-500 active:duration-200 absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2"
-              id="service2Button"
-            >
-              VRIJBLIJVENDE OFFERTE
-            </button>
+            <p className="py-10">
+              Heb je een ontruiming nodig? Neem gerust contact met ons op voor
+              een vrijblijvende offerte. Bel, stuur of WhatsApp ons de details
+              via{" "}
+              <a href="tel:+32 468 12 65 99">
+                <span className="font-medium underline">
+                  John: +32 468 12 65 99
+                </span>
+              </a>{" "}
+              of{" "}
+              <a href="tel:+32 477 46 25 38">
+                <span className="font-medium underline">
+                  Peter: +32 477 46 25 38
+                </span>
+              </a>
+              . Je kunt ook via de onderstaande knop het bijhorend formulier
+              invullen.
+            </p>
+            <Link to="/diensten/ontruiming-form">
+              <button
+                className="bg-gradient-to-b from-secondary-yellow to-primary-yellow shadow-md text-center no-underline whitespace-nowrap cursor-pointer font-primary text-primary-black text-base font-extrabold tracking-widest uppercase rounded-md border-0 px-4 py-3 hover:from-secondary-yellow hover:to-secondary-yellow active:scale-95 transition-colors duration-500 active:duration-200 absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2"
+                id="service2Button"
+              >
+                VRIJBLIJVENDE OFFERTE
+              </button>
+            </Link>
           </div>
         </li>
       </ul>

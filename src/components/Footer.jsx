@@ -1,5 +1,4 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import extremadealsLogo from "../assets/logos/extremadeals-logo-yellow.svg";
 import locationIcon from "../assets/svg/location-icon-yellow-gradient.svg";
 import mailIcon from "../assets/svg/mail-icon-yellow-gradient.svg";
@@ -7,20 +6,26 @@ import stripeCautionDecoration from "../assets/svg/stripe-caution-tape-decoratio
 import whatsappIcon from "../assets/svg/whatsapp-icon-yellow-gradient.svg";
 
 export default function Footer() {
+  const navigate = useNavigate();
+  const handleClick = (sectionId) => {
+    navigate("/contact", { state: { id: sectionId } });
+  };
   return (
-    <footer className="bg-primary-black text-primary-white ">
-      <div className="grid grid-cols-[2fr_1fr]  max-w-[1536px] mx-auto pl-6 sm:pl-10 h-[480px] md:h-[750px] lg:h-[560px]  overflow-hidden font-roboto relative">
-        <div className="my-6 md:my-10">
-          <section className="flex gap-x-6 md:gap-x-36">
-            <img
-              className="w-[110px]  h-auto  lg:w-[12.5rem]"
-              src={extremadealsLogo}
-              alt="logo"
-            />
+    <footer className="bg-primary-black text-primary-white relative overflow-hidden">
+      <div className="container grid grid-cols-1 xl:grid-cols-[4fr_1fr] h-[510px] lg:h-[560px] font-roboto">
+        <div className="my-6 md:my-10 z-20 relative">
+          <section className="flex gap-x-12 md:gap-x-36">
+            <Link to="/">
+              <img
+                className="w-[110px]  h-auto  lg:w-[12.5rem]"
+                src={extremadealsLogo}
+                alt="logo"
+              />
+            </Link>
             <div className="flex gap-4 items-end">
               <a href="#">
                 <svg
-                  className="w-[23px] sm:w-7 hover:scale-90 transition-colors duration-500"
+                  className="w-[30px] md:w-[35px] h-[35px]  hover:scale-90 transition-transform duration-300"
                   width="45"
                   height="45"
                   viewBox="0 0 250 251"
@@ -48,7 +53,7 @@ export default function Footer() {
               </a>
               <a href="#">
                 <svg
-                  className="w-[23px] sm:w-7 hover:scale-90 transition-colors duration-500"
+                  className="w-[30px] md:w-[35px] h-[35px] hover:scale-90 transition-transform duration-300"
                   width="45"
                   height="45"
                   viewBox="0 0 250 250"
@@ -78,13 +83,13 @@ export default function Footer() {
               </a>
             </div>
           </section>
-          <section className="grid md:grid-cols-[2fr_1fr_1fr] lg:grid-cols-[2fr_1fr_1fr_1fr] md:gap-y-10 mt-7 md:mt-12">
+          <section className="grid md:grid-cols-[2fr_1fr_1fr_1fr] md:gap-y-10 mt-7 md:mt-12">
             <div className="mt-1">
               <h3 className="font-bold hidden md:block mb-6">ONS BEDRIJF</h3>
               <ul className="text-sm lg:text-base  space-y-5 md:space-y-6">
                 <li>
                   <a
-                    href="https://www.google.com/maps?q=zutendaal,belgium"
+                    href="https://maps.app.goo.gl/ruSjMza4feecABnj9"
                     className="flex items-center gap-2"
                   >
                     <img
@@ -160,47 +165,48 @@ export default function Footer() {
               <h3 className="font-bold mb-6">EXTRA</h3>
               <ul className="text-base space-y-6">
                 <li>
-                  <Link to="/">Over ons</Link>
+                  <button onClick={() => handleClick("OverOns")}>
+                    Over ons
+                  </button>
                 </li>
                 <li>
-                  <Link to="/deals">FAQ</Link>
+                  <button onClick={() => handleClick("FAQ")}>FAQ</button>
                 </li>
               </ul>
             </div>
-            <div className="mb-3 mt-5 md:mt-0">
+            <div className="my-8 md:mt-0">
               <h3 className="font-bold hidden md:block mb-6">JURIDISCH</h3>
-              <ul className="text-sm md:text-base space-y-1 md:space-y-6">
+              <ul className="text-sm md:text-base space-y-3 md:space-y-6">
                 <li>
-                  <Link to="/">Privacybeleid</Link>
+                  <Link to="/privacybeleid">Privacybeleid</Link>
                 </li>
                 <li>
-                  <Link to="/deals">Cookiebeleid</Link>
+                  <Link to="/cookiebeleid">Cookiebeleid</Link>
                 </li>
                 <li>
-                  <Link to="/diensten">Gebruikersvoorwaarden</Link>
+                  <Link to="/algemene-voorwaarden">Gebruikersvoorwaarden</Link>
                 </li>
               </ul>
             </div>
           </section>
-          <section className="flex flex-col lg:items-center text-sm md:text-base w-[70%] md:w-full md:mt-14">
+          <section className="flex flex-col lg:items-center text-sm md:text-base  md:mt-14">
             <p>Copyright © 2023 - 2023. </p>
             <p>
               Content by
-              <span className="text-primary-yellow"> Extrema Deals.</span> Web
-              production by
-              <span className="text-primary-yellow"> Vastly.</span>
+              <a href="https://www.extremadeals.com/.">
+                <span className="text-primary-yellow"> Extrema Deals.</span> Web
+                production by
+              </a>
+              <a href="https://www.vastly.be/">
+                <span className="text-primary-yellow"> Vastly.</span>
+              </a>
             </p>
             <p>All rights reserved.</p>
           </section>
         </div>
-        <div>
-          <img
-            className="w-[224px] h-[400px] hidden md:block md:h-[750px] md:w-[630px] lg:w-[493px] lg:h-auto  absolute top-0 right-0 object-fit"
-            src={stripeCautionDecoration}
-            alt="stripe-decoration"
-          />
+        <div className="hidden">
           <svg
-            className="absolute w-[280px] md:hidden h-[480px] top-0 -right-14 sm:-right-2"
+            className="absolute w-[280px]  h-[480px] top-0 -right-14 sm:-right-2"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 224 399"
             fill="none"
@@ -215,6 +221,11 @@ export default function Footer() {
           </svg>
         </div>
       </div>
+      <img
+        className="absolute top-0 right-0 object-cover md:object-fit z-10 h-full"
+        src={stripeCautionDecoration}
+        alt="stripe-decoration"
+      />
     </footer>
   );
 }

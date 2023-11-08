@@ -6,22 +6,18 @@ export default function GoggleMap() {
   useEffect(() => {
     setIsLoading(true);
 
-    // Set a timeout to simulate loading delay (you can remove this in a real application)
     const timeout = setTimeout(() => {
       setIsLoading(false);
     }, 2000);
-
-    // Clear the timeout to avoid memory leaks
     return () => clearTimeout(timeout);
   }, []);
+
   return (
     <section className="w-full relative h-[400px] md:h-[500px] lg:h-[500px] bg-primary-black">
       {isLoading ? (
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-          <div>
-            <div className="w-16 h-16 rounded-full absolute border-2 border-solid border-primary-gray"></div>
-            <div className="w-16 h-16 rounded-full animate-spin absolute border-2 border-solid border-primary-yellow border-t-transparent"></div>
-          </div>
+        <div className="container relative h-full flex justify-center items-center">
+          <div className="w-16 h-16 rounded-full absolute border-2 border-solid border-primary-gray "></div>
+          <div className="w-16 h-16 rounded-full animate-spin absolute border-2 border-solid border-primary-yellow border-t-transparent "></div>
         </div>
       ) : (
         <iframe

@@ -1,6 +1,6 @@
 import { yupResolver } from "@hookform/resolvers/yup";
-import React from "react";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { contactSchema } from "../yupSchema";
 
@@ -23,17 +23,17 @@ export default function ContactForm() {
         CONTACTEER ONS
       </h1>
       <form onSubmit={handleSubmit(onSubmit)} className="">
-        <div className="w-[90%] lg:w-[750px] mx-auto md:my-5">
+        <div className="w-[90%] lg:w-[800px] mx-auto md:my-7">
           <div className="grid md:grid-cols-2 gap-x-8">
             <div>
               <input
                 className="input-class"
                 type="text"
                 placeholder="Voornaam"
-                {...register("firstname")}
+                {...register("Voornaam")}
               />
               <p className="text-red-500 ml-2.5 text-sm">
-                {errors?.firstname?.message}
+                {errors?.Voornaam?.message}
               </p>
             </div>
             <div>
@@ -41,10 +41,10 @@ export default function ContactForm() {
                 className="input-class"
                 type="text"
                 placeholder="Achternaam"
-                {...register("lastname")}
+                {...register("Achternaam")}
               />
               <p className="text-red-500 ml-2.5 text-sm">
-                {errors?.lastname?.message}
+                {errors?.Achternaam?.message}
               </p>
             </div>
           </div>
@@ -52,12 +52,12 @@ export default function ContactForm() {
             <div>
               <input
                 className="input-class"
-                type="text"
+                type="email"
                 placeholder="E-mailadres"
-                {...register("email")}
+                {...register("Email")}
               />
               <p className="text-red-500 ml-2.5 text-sm">
-                {errors?.email?.message}
+                {errors?.Email?.message}
               </p>
             </div>
             <div>
@@ -65,45 +65,55 @@ export default function ContactForm() {
                 className="input-class"
                 type="text"
                 placeholder="Telefoonnummer"
-                {...register("phone")}
+                {...register("Telefoonnummer")}
               />
               <p className="text-red-500 ml-2.5 text-sm">
-                {errors?.phone?.message}
+                {errors?.Telefoonnummer?.message}
               </p>
             </div>
           </div>
           <div className="grid md:grid-cols-[1fr_2fr] gap-x-8">
             <div>
               <select
-                className="input-class text-gray-600 "
+                className="input-class text-gray-600"
                 placeholder="Categorie"
-                {...register("category")}
+                {...register("Categorie")}
               >
-                <option value="category">Categorie</option>
+                <option>Categorie</option>
+                <option value="Deals">Deals</option>
+                <option value="Opkopen">Dienst: Opkopen</option>
+                <option value="Ontruiming">Dienst: Ontruiming</option>
+                <option value="Algemeen">Algemeen</option>
               </select>
+              <p className="text-red-500 ml-2.5 text-sm">
+                {errors?.Categorie?.message}
+              </p>
             </div>
             <div>
               <input
                 className="input-class"
                 type="text"
                 placeholder="Onderwerp"
-                {...register("subject")}
+                {...register("Onderwerp")}
               />
               <p className="text-red-500 ml-2.5 text-sm">
-                {errors?.subject?.message}
+                {errors?.Onderwerp?.message}
               </p>
             </div>
           </div>
           <div>
             <textarea
-              className="input-class h-24 md:h-32"
+              className="input-class h-24 md:h-32 resize-none"
               placeholder="Bericht"
-              {...register("message")}
+              {...register("Bericht")}
             ></textarea>
+            <p className="text-red-500 ml-2.5 text-sm">
+              {errors?.Bericht?.message}
+            </p>
           </div>
         </div>
         <div className="md:bg-secondary-black text-primary-white md:py-3">
-          <div className="grid md:grid-cols-2 w-[90%] md:w-[750px] mx-auto items-center gap-x-8">
+          <div className="grid md:grid-cols-2 w-[90%] lg:w-[800px] mx-auto items-center gap-x-8">
             <div className="md:order-2 space-y-5 text-sm my-4">
               <div className="flex items-start gap-x-2">
                 <input
@@ -113,17 +123,25 @@ export default function ContactForm() {
                 />
                 <p>
                   Ja, ik ga akkoord met het
-                  <a className="text-primary-yellow" href="#">
-                    <span> Privacybeleid </span>
-                  </a>
+                  <Link to="/privacybeleid" className="text-primary-yellow">
+                    <span> Privacybeleid</span>
+                  </Link>
                   ,
-                  <a className="text-primary-yellow" href="#">
-                    <span>Cookiebeleid </span>
-                  </a>
+                  <Link
+                    to="/cookiebeleid"
+                    className="text-primary-yellow"
+                    href="#"
+                  >
+                    <span> Cookiebeleid </span>
+                  </Link>
                   en de
-                  <a className="text-primary-yellow" href="#">
+                  <Link
+                    to="/algemene-voorwaarden"
+                    className="text-primary-yellow"
+                    href="#"
+                  >
                     <span> Algemene Voorwaarden </span>
-                  </a>
+                  </Link>
                   .
                 </p>
               </div>
