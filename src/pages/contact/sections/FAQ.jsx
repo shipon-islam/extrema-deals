@@ -22,10 +22,12 @@ export default function FAQ() {
             <li key={faq.id} className="border-b border-primary-yellow py-2">
               <div className="flex justify-between items-center">
                 <div>
-                  <span className="text-2xl text-primary-yellow font-bold w-10 inline-block">
+                  <span className="text-xl md:text-2xl text-primary-yellow font-bold md:w-10 inline-block">
                     {faq.id}.
                   </span>
-                  <span className="md:pl-2 font-bold">{faq.ques}</span>
+                  <span className="text-sm md:text-base pl-1 md:pl-2 font-bold">
+                    {faq.ques}
+                  </span>
                 </div>
 
                 <button onClick={handleCollappeAns}>
@@ -33,7 +35,9 @@ export default function FAQ() {
                   <IoIosArrowDown className="text-2xl text-primary-yellow" />
                 </button>
               </div>
-              <p className="hidden md:pl-12 mt-2">{faq.ans}</p>
+              <p className="text-sm md:text-base hidden md:pl-12 mt-2">
+                {faq.ans}
+              </p>
             </li>
           ))}
         </ul>
