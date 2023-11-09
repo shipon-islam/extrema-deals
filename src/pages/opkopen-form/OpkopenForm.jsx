@@ -95,7 +95,7 @@ export default function OpkopenForm() {
             <div className="grid md:grid-cols-[1fr_2fr] gap-x-8">
               <div>
                 <input
-                  className="input-class text-gray-400"
+                  className="input-class text-primary-black"
                   type="text"
                   defaultValue="Opkopen"
                   placeholder="Opkopen"

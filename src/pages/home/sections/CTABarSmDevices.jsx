@@ -23,8 +23,11 @@ export default function CTABarSmDevices() {
     thisButton.classList.add("bg-primary-black");
     thisBtnIcon.classList.add("fill-primary-yellow");
     thisBtnText.classList.add("text-primary-yellow");
-    if (thisBtnText.innerText.toUpperCase() !== "DEALS") {
-      handleClick(thisBtnText.innerText.toUpperCase());
+    const categoryBtnText = thisBtnText.innerText.toUpperCase();
+    if (categoryBtnText === "DEALS") {
+      navigate("/deals");
+    } else {
+      navigate("/diensten", { state: { id: categoryBtnText } });
     }
   };
   return (
@@ -65,7 +68,7 @@ export default function CTABarSmDevices() {
         ref={crtContainerRef}
         className="grid grid-cols-3 items-center bg-secondary-black text-primary-white"
       >
-        <button onClick={handleCtaBtn} className="bg-primary-black py-4">
+        <button onClick={handleCtaBtn} className="py-4">
           <svg
             className="w-[22px] mx-auto sm:w-6"
             width="45"
@@ -80,7 +83,7 @@ export default function CTABarSmDevices() {
             <path d="M38.5025 61.3242C39.7803 60.7686 41.1136 60.4909 42.5025 60.4909C46.2248 60.3797 47.7525 62.1575 47.0859 65.8242L46.0859 70.9075C45.9417 71.5798 45.618 72.2024 45.1504 72.707C44.6827 73.2116 44.0892 73.5788 43.4349 73.7682C42.7806 73.9576 42.0908 73.9619 41.4412 73.7807C40.7916 73.5995 40.2074 73.2397 39.7525 72.7409L36.8359 69.4909C36.2902 68.8898 35.8939 68.1686 35.679 67.3857C35.4642 66.6029 35.4368 65.7805 35.5991 64.9851C35.7614 64.1897 36.1089 63.4437 36.6133 62.8077C37.1178 62.1716 37.765 61.6634 38.5025 61.3242Z" />
             <path d="M175.753 174.408C186.197 170.63 191.975 164.269 193.086 155.324C193.367 153.455 194.343 151.762 195.818 150.581C197.294 149.401 199.161 148.822 201.046 148.958C202.931 149.095 204.694 149.939 205.984 151.32C207.274 152.701 207.995 154.518 208.003 156.408L207.419 187.241C207.366 189.486 206.77 191.685 205.683 193.649C204.596 195.613 203.051 197.283 201.18 198.513C199.31 199.744 197.17 200.499 194.947 200.713C192.723 200.927 190.483 200.593 188.419 199.741C135.03 177.852 78.3636 166.796 18.4192 166.574C15.8081 166.574 13.6692 166.019 12.0025 164.908C6.89142 161.519 6.66919 157.463 11.3359 152.741C12.5652 151.514 14.2135 150.825 15.9192 150.824C68.0859 150.38 118.864 158.296 168.253 174.574C170.753 175.408 173.253 175.352 175.753 174.408Z" />
           </svg>
-          <h1 className="text-[12px] sm:text-sm font-bold mt-1.5">OPOKEN</h1>
+          <h1 className="text-[12px] sm:text-sm font-bold mt-1.5">OPKOPEN</h1>
         </button>
         <button onClick={handleCtaBtn} className="py-4">
           <svg
