@@ -68,7 +68,7 @@ export default function Privacybeleid() {
               contact met ons op via{" "}
               <a
                 className="font-bold underline hover:text-secondary-black"
-                href="mail:info@extremadeals.com"
+                href="mailto:info@extremadeals.com"
               >
                 info@extremadeals.com
               </a>
