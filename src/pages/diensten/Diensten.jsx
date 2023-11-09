@@ -10,8 +10,6 @@ export default function Diensten() {
     if (location.state) {
       const id = location.state.id;
       const section = document.getElementById(id);
-      console.log(id);
-      console.log(section);
       if (section) {
         window.scrollTo({
           behavior: "smooth",

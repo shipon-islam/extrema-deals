@@ -11,12 +11,11 @@ export default function DienstenFeaturesSmDevices() {
     collapesAbleItem.classList.toggle("hidden");
     arrowDownBtn.classList.toggle("hidden");
     arrowUpBtn.classList.toggle("hidden");
-    console.log(arrowDownBtn);
   };
   return (
     <section className="md:hidden">
       <ul className="relative -top-10 space-y-12">
-        <li className="bg-primary-yellow rounded-3xl relative">
+        <li id="OPKOPEN" className="bg-primary-yellow rounded-3xl relative">
           <div
             className="flex items-center justify-between py-4 px-4
           "
@@ -70,7 +69,10 @@ export default function DienstenFeaturesSmDevices() {
             </Link>
           </div>
         </li>
-        <li className="bg-primary-black text-white rounded-3xl relative">
+        <li
+          id="ONTRUIMING"
+          className="bg-primary-black text-white rounded-3xl relative"
+        >
           <div
             className="flex items-center justify-between py-6 px-4
           "

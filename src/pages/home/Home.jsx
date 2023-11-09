@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <CTABarSmDevices ctaDetails={ctaDetailsApi} />
+      <CTABarSmDevices />
       <CTABar ctaDetails={ctaDetailsApi} />
       <ProductSlider />
       <Subscribe />
