@@ -1,6 +1,6 @@
 export default function AboutUs() {
   return (
-    <section id="OverOns" className="pt-10">
+    <section id="OverOns" className="pt-10 bg-secondary-black">
       <div className="container text-center">
         <h1 className="font-bold text-2xl text-primary-yellow text-center mb-8">
           OVER ONS

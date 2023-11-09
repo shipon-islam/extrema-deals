@@ -10,7 +10,7 @@ export default function SocialInfo() {
           style={{
             clipPath: "polygon(25% 0, 100% 0, 100% 100%, 25% 100%, 0 50%)",
           }}
-          className="bg-primary-black w-1/2 absolute right-0 top-0 h-full"
+          className="bg-secondary-black w-1/2 absolute right-0 top-0 h-full"
         >
           444
         </div>

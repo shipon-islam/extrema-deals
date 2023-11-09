@@ -12,7 +12,7 @@ export default function Hero() {
           clipPath:
             "polygon(0 0, 88% 0, 100% 100%, 79% 100%, 24% 100%, 0 100%)",
         }}
-        className="bg-primary-black absolute -bottom-1 left-0 w-2/4 h-[6rem] hidden md:block"
+        className="bg-secondary-black absolute -bottom-1 left-0 w-2/4 h-[6rem] hidden md:block"
       ></div>
       <div className="container absolute bottom-[1.6rem] left-1/2 translate-x-[-50%] hidden md:block">
         <h1 className="text-primary-yellow text-3xl  font-bold  whitespace-nowrap">

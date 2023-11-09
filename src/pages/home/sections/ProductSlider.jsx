@@ -15,7 +15,7 @@ export default function ProductSlider() {
             "radial-gradient(60% 60.01% at 50% 57.98%,#FDC814 72.92%, #FFE617 100%)",
         }}
       >
-        <h1 className="py-10 text-center text-2xl font-bold text-secondary-black relative md:top-10 xl:top-0 lg:text-3xl xl:text-4xl">
+        <h1 className="py-10 md:py-12 lg:py-20 text-center text-2xl font-bold text-secondary-black relative md:top-10 xl:top-0 lg:text-3xl xl:text-4xl">
           DEALS IN DE KIJKER
         </h1>
         <div className="relative h-[18.5rem] sm:h-[25rem] md:h-[38rem] lg:h-[50rem] w-full overflow-hidden">

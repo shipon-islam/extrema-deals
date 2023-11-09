@@ -124,7 +124,14 @@ export default function Cookiebeleid() {
             </h5>
             <p className="font-roboto">
               Als u vragen heeft over ons cookiebeleid, kunt u contact met ons
-              opnemen via info@extremadeals.com.
+              opnemen via{" "}
+              <a
+                className="font-bold underline hover:text-secondary-black"
+                href="mail:info@extremadeals.com"
+              >
+                info@extremadeals.com
+              </a>
+              .
             </p>
           </li>
         </ul>

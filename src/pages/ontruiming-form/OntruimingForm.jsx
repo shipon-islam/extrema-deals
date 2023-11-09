@@ -11,14 +11,26 @@ export default function OntruimingForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isValid },
   } = useForm({
     resolver: yupResolver(ontruimingSchema),
   });
 
   const onSubmit = (data) => {
-    toast.success("Successfuly send", { autoClose: 1000 });
+    if (data.isAgreeWithPolicy) {
+      toast.success("Successfuly send", { autoClose: 1000 });
+    }
   };
+  const handleFile = () => {
+    if (isValid) {
+      fileRef.current.click();
+    } else {
+      toast.error("Ensure the fields before picture upload", {
+        autoClose: 1000,
+      });
+    }
+  };
+
   useEffect(() => {
     window.scrollTo({
       behavior: "smooth",
@@ -28,7 +40,7 @@ export default function OntruimingForm() {
   return (
     <main className="bg-primary-black">
       <section className="container ">
-        <div className="w-[90%] lg:w-[800px] mx-auto py-16">
+        <div className="lg:w-[800px] mx-auto py-16">
           <h1 className="font-bold text-4xl text-primary-yellow mb-6">
             ONTRUIMING
           </h1>
@@ -84,8 +96,10 @@ export default function OntruimingForm() {
             <div className="grid md:grid-cols-[1fr_2fr] gap-x-8">
               <div>
                 <input
-                  className="input-class"
+                  className="input-class text-gray-400"
                   type="text"
+                  defaultValue="Ontruiming"
+                  readOnly
                   placeholder="Ontruiming"
                   {...register("Ontruiming")}
                 />
@@ -96,10 +110,7 @@ export default function OntruimingForm() {
               <div>
                 <div className="input-class bg-white flex justify-between items-center px-4">
                   <span className="text-gray-400">Foto's uploaden</span>
-                  <span
-                    onClick={() => fileRef.current.click()}
-                    className="cursor-pointer"
-                  >
+                  <span onClick={handleFile} className="cursor-pointer">
                     <GrAttachment />
                   </span>
                 </div>

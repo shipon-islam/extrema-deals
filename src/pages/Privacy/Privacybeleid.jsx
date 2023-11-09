@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-
+import { Link } from "react-router-dom";
 export default function Privacybeleid() {
   useEffect(() => {
     window.scrollTo({
@@ -41,7 +41,14 @@ export default function Privacybeleid() {
               Uw gegevens worden gebruikt om onze diensten aan te bieden, uw
               ervaring te verbeteren, en voor communicatie gerelateerd aan onze
               diensten. We gebruiken ook cookies voor websitefunctionaliteit en
-              analyse (zie ons Cookiebeleid).
+              analyse (zie ons{" "}
+              <Link
+                className="font-bold underline hover:text-secondary-black"
+                to="/cookiebeleid"
+              >
+                Cookiebeleid
+              </Link>
+              ).
             </p>
           </li>
           <li>
@@ -58,7 +65,14 @@ export default function Privacybeleid() {
             <p className="font-roboto">
               U heeft het recht op toegang tot uw gegevens, correctie,
               verwijdering, en bezwaar tegen verwerking. Voor verzoeken, neem
-              contact met ons op via info@extremadeals.com.
+              contact met ons op via{" "}
+              <a
+                className="font-bold underline hover:text-secondary-black"
+                href="mail:info@extremadeals.com"
+              >
+                info@extremadeals.com
+              </a>
+              .
             </p>
           </li>
           <li>

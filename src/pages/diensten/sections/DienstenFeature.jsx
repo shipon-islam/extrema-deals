@@ -1,11 +1,15 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import cashbagGradientIcon from "../../../assets/svg/hand-holding-cashbag-buyup-icon-gradient.svg";
 import houseClearanceGadient from "../../../assets/svg/house-clearance-icon-gradient.svg";
 
 export default function DienstenFeature() {
   return (
-    <section className="bg-primary-black font-roboto hidden md:block">
+    <section
+      style={{
+        background: "linear-gradient(180deg, #1F2228 0%, #0E1012 100%)",
+      }}
+      className="font-roboto hidden md:block"
+    >
       <div className="container">
         <div id="OPKOPEN" className="grid grid-cols-[1fr_3fr] gap-x-4 pt-32">
           <div>

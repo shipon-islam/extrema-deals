@@ -9,11 +9,6 @@ export default function CTABarSmDevices({ ctaDetails }) {
     const thisBtnIcon = event.currentTarget.firstChild;
     const thisBtnText = event.currentTarget.lastChild;
     const crtContainerChildrens = crtContainerRef.current.children;
-    ctaDetails.forEach((item) => {
-      if (thisBtnText.innerText === item.category) {
-        ctaTextRef.current.innerText = item.para_text;
-      }
-    });
 
     for (let crtItem of crtContainerChildrens) {
       crtItem.classList.remove("bg-primary-black");
@@ -32,7 +27,7 @@ export default function CTABarSmDevices({ ctaDetails }) {
             style={{
               clipPath: "polygon(0 0, 100% 0, 60% 100%, 25% 100%, 0 100%)",
             }}
-            className="bg-primary-black h-[120px] sm:h-[150px] w-full relative"
+            className="bg-secondary-black h-[120px] sm:h-[150px] w-full relative"
           >
             <div className="absolute top-1/2 left-5 sm:left-6 md:left-12  -translate-y-1/2">
               <h3 className="text-primary-yellow float-left w-10  sm:text-2xl md:text-3xl font-bold">
@@ -51,7 +46,10 @@ export default function CTABarSmDevices({ ctaDetails }) {
             ref={ctaTextRef}
             className="text-[0.8rem] sm:text-lg font-roboto pt-2 pb-2 md:pb-0 pr-1 sm:p-2 md:pr-12"
           >
-            {ctaDetails[0]?.para_text}
+            Ontdek onze topdeals in onze diverse collectie van producten en
+            zorgvuldig gerenoveerde items. Heb je spullen die je wilt verkopen?
+            Wij bieden een eerlijke prijs. Ook voor een professionele
+            ontruimingsdienst staan we altijd voor je klaar.
           </p>
         </div>
       </div>

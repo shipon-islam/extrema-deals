@@ -40,7 +40,7 @@ export default function Subscribe() {
             {...register("Email")}
           />
 
-          <button className="bg-primary-yellow block px-3 md:px-9 py-2 md:py-3 whitespace-nowrap font-bold text-[11px] sm:text-sm">
+          <button className="bg-gradient-to-b from-secondary-yellow to-primary-yellow hover:from-secondary-yellow hover:to-secondary-yellow active:scale-95 transition-colors duration-500 active:duration-200 block px-3 md:px-9 py-2 md:py-3 whitespace-nowrap font-bold text-[11px] sm:text-sm">
             SCHRIJF JE IN
           </button>
         </div>

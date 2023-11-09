@@ -11,7 +11,7 @@ export const contactSchema = yup
       .email("E-mail is invalid")
       .required("E-mail is verplicht"),
     Bericht: yup.string().min(0).required("Bericht is verplicht"),
-    isAgreeWithPolicy: yup.boolean().required(),
+    isAgreeWithPolicy: yup.boolean().oneOf([true], "Checkbox must be checked"),
     wantReceiveUpdates: yup.boolean().required(),
   })
   .required();
@@ -40,7 +40,7 @@ export const opkopenSchema = yup
       .email("E-mail is invalid")
       .required("E-mail is verplicht"),
     Bericht: yup.string().min(0).required("Bericht is verplicht"),
-    isAgreeWithPolicy: yup.boolean().required(),
+    isAgreeWithPolicy: yup.boolean(),
   })
   .required();
 export const newsleterSchema = yup

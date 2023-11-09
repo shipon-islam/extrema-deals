@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import extremadealsLogo from "../assets/logos/extremadeals-logo-yellow.svg";
 import locationIcon from "../assets/svg/location-icon-yellow-gradient.svg";
 import mailIcon from "../assets/svg/mail-icon-yellow-gradient.svg";
@@ -23,7 +23,7 @@ export default function Footer() {
               />
             </Link>
             <div className="flex gap-4 items-end">
-              <a href="#">
+              <a href="#" target="blank">
                 <svg
                   className="w-[30px] md:w-[35px] h-[35px]  hover:scale-90 transition-transform duration-300"
                   width="45"
@@ -51,7 +51,7 @@ export default function Footer() {
                   </defs>
                 </svg>
               </a>
-              <a href="#">
+              <a href="#" target="blank">
                 <svg
                   className="w-[30px] md:w-[35px] h-[35px] hover:scale-90 transition-transform duration-300"
                   width="45"
@@ -90,7 +90,8 @@ export default function Footer() {
                 <li>
                   <a
                     href="https://maps.app.goo.gl/ruSjMza4feecABnj9"
-                    className="flex items-center gap-2"
+                    className="flex items-center gap-2 hover:text-primary-yellow"
+                    target="blank"
                   >
                     <img
                       className="w-5 lg:w-[1.5625rem] h-auto"
@@ -106,7 +107,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="tel:+32 468 12 65 99"
-                    className="flex items-center gap-2"
+                    className="flex items-center gap-2 hover:text-primary-yellow"
                   >
                     <img
                       className="w-5 lg:w-[1.5625rem] h-auto"
@@ -119,7 +120,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="tel:+32 477 46 25 38"
-                    className="flex items-center gap-2"
+                    className="flex items-center gap-2 hover:text-primary-yellow"
                   >
                     <img
                       className="w-5 lg:w-[1.5625rem] h-auto"
@@ -132,7 +133,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="mailto:info@extremadeals.com"
-                    className="flex items-center gap-2"
+                    className="flex items-center gap-2 hover:text-primary-yellow"
                   >
                     <img
                       className="w-5 lg:w-[1.5625rem] h-auto"
@@ -148,16 +149,48 @@ export default function Footer() {
               <h3 className="font-bold mb-6">MENU</h3>
               <ul className="text-base space-y-6">
                 <li>
-                  <Link to="/">Home</Link>
+                  <NavLink
+                    style={({ isActive }) =>
+                      isActive ? { color: "#fdc814" } : null
+                    }
+                    className="hover:text-primary-yellow"
+                    to="/"
+                  >
+                    Home
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/deals">Deals</Link>
+                  <NavLink
+                    style={({ isActive }) =>
+                      isActive ? { color: "#fdc814" } : null
+                    }
+                    className="hover:text-primary-yellow"
+                    to="/deals"
+                  >
+                    Deals
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/diensten">Diensten</Link>
+                  <NavLink
+                    style={({ isActive }) =>
+                      isActive ? { color: "#fdc814" } : null
+                    }
+                    className="hover:text-primary-yellow"
+                    to="/diensten"
+                  >
+                    Diensten
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/contact">Contact</Link>
+                  <NavLink
+                    style={({ isActive }) =>
+                      isActive ? { color: "#fdc814" } : null
+                    }
+                    className="hover:text-primary-yellow"
+                    to="/contact"
+                  >
+                    Contact
+                  </NavLink>
                 </li>
               </ul>
             </div>
@@ -165,12 +198,20 @@ export default function Footer() {
               <h3 className="font-bold mb-6">EXTRA</h3>
               <ul className="text-base space-y-6">
                 <li>
-                  <button onClick={() => handleClick("OverOns")}>
+                  <button
+                    className="hover:text-primary-yellow active:text-primary-yellow"
+                    onClick={() => handleClick("OverOns")}
+                  >
                     Over ons
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => handleClick("FAQ")}>FAQ</button>
+                  <button
+                    className="hover:text-primary-yellow active:text-primary-yellow"
+                    onClick={() => handleClick("FAQ")}
+                  >
+                    FAQ
+                  </button>
                 </li>
               </ul>
             </div>
@@ -178,13 +219,37 @@ export default function Footer() {
               <h3 className="font-bold hidden md:block mb-6">JURIDISCH</h3>
               <ul className="text-sm md:text-base space-y-3 md:space-y-6">
                 <li>
-                  <Link to="/privacybeleid">Privacybeleid</Link>
+                  <NavLink
+                    style={({ isActive }) =>
+                      isActive ? { color: "#fdc814" } : null
+                    }
+                    className="hover:text-primary-yellow"
+                    to="/privacybeleid"
+                  >
+                    Privacybeleid
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/cookiebeleid">Cookiebeleid</Link>
+                  <NavLink
+                    style={({ isActive }) =>
+                      isActive ? { color: "#fdc814" } : null
+                    }
+                    className="hover:text-primary-yellow "
+                    to="/cookiebeleid"
+                  >
+                    Cookiebeleid
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/algemene-voorwaarden">Gebruikersvoorwaarden</Link>
+                  <NavLink
+                    style={({ isActive }) =>
+                      isActive ? { color: "#fdc814" } : null
+                    }
+                    className="hover:text-primary-yellow"
+                    to="/algemene-voorwaarden"
+                  >
+                    Algemene Voorwaarden
+                  </NavLink>
                 </li>
               </ul>
             </div>
@@ -193,11 +258,11 @@ export default function Footer() {
             <p>Copyright © 2023 - 2023. </p>
             <p>
               Content by
-              <a href="https://www.extremadeals.com/.">
+              <a href="https://www.extremadeals.com/." target="blank">
                 <span className="text-primary-yellow"> Extrema Deals.</span> Web
                 production by
               </a>
-              <a href="https://www.vastly.be/">
+              <a href="https://www.vastly.be/" target="blank">
                 <span className="text-primary-yellow"> Vastly.</span>
               </a>
             </p>

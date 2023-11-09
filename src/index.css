@@ -70,23 +70,16 @@
   background-size: cover;
   width: 100%;
 }
-.cta-banner-bg {
-  background-image: url("./assets/svg/triangles-bg.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-}
+
 .cta-diamond-shape {
   background-image: url("./assets/svg/cta-bar-diamond-bg.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
 .cta-card-gadient {
-  background: linear-gradient(
-    144deg,
-    #1f2228 26.43%,
-    #1f2328 28.95%,
-    #272c2f 70.43%
-  );
+  background: linear-gradient(143deg, #1f2228 0%, #0e1012 100%);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+* {
+  -webkit-tap-highlight-color: transparent;
 }

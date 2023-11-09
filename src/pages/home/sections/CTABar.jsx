@@ -10,7 +10,7 @@ export default function CTABar({ ctaDetails }) {
   };
   return (
     <section className="bg-secondary-yellow">
-      <div className="bg-primary-black hidden lg:block text-white h-[300px]">
+      <div className="bg-secondary-black hidden lg:block text-white h-[300px]">
         <div className="container flex items-center relative top-[-9.4rem] xl:top-[-9.8rem]">
           <div className="relative basis-[25%]">
             <img

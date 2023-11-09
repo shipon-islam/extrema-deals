@@ -23,7 +23,7 @@ export default function ContactForm() {
         CONTACTEER ONS
       </h1>
       <form onSubmit={handleSubmit(onSubmit)} className="">
-        <div className="w-[90%] lg:w-[800px] mx-auto md:my-7">
+        <div className="w-[95%] sm:w-[90%] lg:w-[800px] mx-auto md:my-7">
           <div className="grid md:grid-cols-2 gap-x-8">
             <div>
               <input
@@ -77,9 +77,12 @@ export default function ContactForm() {
               <select
                 className="input-class text-gray-600"
                 placeholder="Categorie"
+                defaultValue="Algemeen"
                 {...register("Categorie")}
               >
-                <option>Categorie</option>
+                <option selected disabled>
+                  Categorie
+                </option>
                 <option value="Deals">Deals</option>
                 <option value="Opkopen">Dienst: Opkopen</option>
                 <option value="Ontruiming">Dienst: Ontruiming</option>
@@ -113,7 +116,7 @@ export default function ContactForm() {
           </div>
         </div>
         <div className="md:bg-secondary-black text-primary-white md:py-3">
-          <div className="grid md:grid-cols-2 w-[90%] lg:w-[800px] mx-auto items-center gap-x-8">
+          <div className="grid md:grid-cols-2 w-[95%] sm:w-90% lg:w-[800px] mx-auto items-center gap-x-8">
             <div className="md:order-2 space-y-5 text-sm my-4">
               <div className="flex items-start gap-x-2">
                 <input
