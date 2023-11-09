@@ -5,8 +5,13 @@ import YellowButton from "../../../components/YellowButton";
 
 export default function CTABar({ ctaDetails }) {
   const navigate = useNavigate();
+
   const handleClick = (sectionId) => {
-    navigate("/diensten", { state: { id: sectionId } });
+    if (sectionId === "DEALS") {
+      navigate("/deals");
+    } else {
+      navigate("/diensten", { state: { id: sectionId } });
+    }
   };
   return (
     <section className="bg-secondary-yellow">
@@ -106,7 +111,10 @@ export default function CTABar({ ctaDetails }) {
                 </svg>
 
                 <p className="cta-card-text">{ctaDetails[2].para_text}</p>
-                <YellowButton title={ctaDetails[2].btn_text} />
+                <YellowButton
+                  onClick={() => handleClick("DEALS")}
+                  title={ctaDetails[2].btn_text}
+                />
               </div>
             </div>
           </div>

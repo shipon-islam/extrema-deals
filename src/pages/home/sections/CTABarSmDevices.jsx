@@ -1,33 +1,14 @@
-import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import handShakeIcon from "../../../assets/svg/handshake-icon-white.svg";
 
 export default function CTABarSmDevices() {
-  const crtContainerRef = useRef(null);
-  const ctaTextRef = useRef(null);
   const navigate = useNavigate();
-  const handleClick = (sectionId) => {
-    navigate("/diensten", { state: { id: sectionId } });
-  };
-  const handleCtaBtn = (event) => {
-    const thisButton = event.currentTarget;
-    const thisBtnIcon = event.currentTarget.firstChild;
-    const thisBtnText = event.currentTarget.lastChild;
-    const crtContainerChildrens = crtContainerRef.current.children;
 
-    for (let crtItem of crtContainerChildrens) {
-      crtItem.classList.remove("bg-primary-black");
-      crtItem.firstChild.classList.remove("fill-primary-yellow");
-      crtItem.lastChild.classList.remove("text-primary-yellow");
-    }
-    thisButton.classList.add("bg-primary-black");
-    thisBtnIcon.classList.add("fill-primary-yellow");
-    thisBtnText.classList.add("text-primary-yellow");
-    const categoryBtnText = thisBtnText.innerText.toUpperCase();
-    if (categoryBtnText === "DEALS") {
+  const handleCtaBtn = (category) => {
+    if (category.toUpperCase() === "DEALS") {
       navigate("/deals");
     } else {
-      navigate("/diensten", { state: { id: categoryBtnText } });
+      navigate("/diensten", { state: { id: category.toUpperCase() } });
     }
   };
   return (
@@ -53,10 +34,7 @@ export default function CTABarSmDevices() {
           </div>
         </div>
         <div>
-          <p
-            ref={ctaTextRef}
-            className="text-[0.8rem] sm:text-lg font-roboto pt-2 pb-2 md:pb-0 pr-1 sm:p-2 md:pr-12"
-          >
+          <p className="text-[0.8rem] sm:text-lg font-roboto pt-2 pb-2 md:pb-0 pr-1 sm:p-2 md:pr-12">
             Ontdek onze topdeals in onze diverse collectie van producten en
             zorgvuldig gerenoveerde items. Heb je spullen die je wilt verkopen?
             Wij bieden een eerlijke prijs. Ook voor een professionele
@@ -64,11 +42,8 @@ export default function CTABarSmDevices() {
           </p>
         </div>
       </div>
-      <div
-        ref={crtContainerRef}
-        className="grid grid-cols-3 items-center bg-secondary-black text-primary-white"
-      >
-        <button onClick={handleCtaBtn} className="py-4">
+      <div className="grid grid-cols-3 items-center bg-secondary-black text-primary-white">
+        <button onClick={() => handleCtaBtn("OPKOPEN")} className="py-4">
           <svg
             className="w-[22px] mx-auto sm:w-6"
             width="45"
@@ -85,7 +60,7 @@ export default function CTABarSmDevices() {
           </svg>
           <h1 className="text-[12px] sm:text-sm font-bold mt-1.5">OPKOPEN</h1>
         </button>
-        <button onClick={handleCtaBtn} className="py-4">
+        <button onClick={() => handleCtaBtn("DEALS")} className="py-4">
           <svg
             className="w-[22px] mx-auto sm:w-6"
             width="37"
@@ -106,7 +81,10 @@ export default function CTABarSmDevices() {
             DEALS
           </h1>
         </button>
-        <button onClick={handleCtaBtn} className="text-primary-white py-4">
+        <button
+          onClick={() => handleCtaBtn("ONTRUIMING")}
+          className="text-primary-white py-4"
+        >
           <svg
             className="w-[22px] mx-auto sm:w-6"
             width="37"
