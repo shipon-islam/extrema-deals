@@ -66,8 +66,9 @@ function ProductSlider({ productImages }) {
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
           style={{ backgroundImage: `url(${productImages[currentIndex].url})` }}
-          className="h-[19rem] sm:h-[20rem] md:h-[40rem] lg:h-[35rem] xl:h-[60rem] bg-contain md:bg-cover bg-center bg-no-repeat  duration-500 relative 2xl:container"
+          className="h-[19rem] sm:h-[20rem] md:h-[40rem] lg:h-[45rem] xl:h-[60rem] bg-contain md:bg-cover bg-center bg-no-repeat  duration-500 relative 2xl:container"
         >
+          {/* lg:h-[35rem] */}
           <div className="flex justify-between px-4 xl:px-10 h-full items-center">
             <button
               onClick={prevSlide}
@@ -91,7 +92,7 @@ function ProductSlider({ productImages }) {
           </div>
         </div>
       </div>
-      <div className="overflow-hidden absolute bottom-[0] right-0 w-full h-[6rem] md:h-[10rem] xl:h-[15rem]">
+      <div className="overflow-hidden absolute -bottom-1 right-0 w-full h-[6rem] md:h-[10rem] xl:h-[15rem]">
         <div className="relative h-full w-full">
           <div className="absolute bottom-0 w-[210%] -ml-4 h-[5rem] md:h-[8rem] xl:h-[15rem] border-t-[0.3rem] md:border-t-[0.8rem] lg:border-t-[1rem] xl:border-t-[1.5rem] border-primary-yellow bg-white rotate-[-5deg]"></div>
           <img

@@ -1,12 +1,22 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { AiFillCloseCircle } from "react-icons/ai";
 import { BiSearch } from "react-icons/bi";
 import { IoIosArrowDown } from "react-icons/io";
-import { categories } from "../constant";
-import { UseToggleContext } from "../hook/ContextProvider";
+import { bubblesApi, categories } from "../constant";
+import { UseToggleContext } from "../context/ContextProvider";
 
 export default function DealsSidebar() {
   const selectRef = useRef(null);
-  const { handleToggler } = UseToggleContext();
+  const [bubbles, setBubbles] = useState(bubblesApi);
+  const { dispatch } = UseToggleContext();
+  //remove bubble
+  const bubbleRemoveHandler = (selectId) => {
+    const newBubbles = bubbles.filter(
+      (currBubble) => currBubble.id !== selectId
+    );
+    setBubbles(newBubbles);
+  };
+
   const handleCategoryChange = (e) => {
     const isChecked = e.target.checked;
     const categoryParent = e.target.parentElement;
@@ -40,19 +50,19 @@ export default function DealsSidebar() {
     <div className="bg-primary-yellow py-10">
       <div className="bg-primary-white grid grid-cols-2 w-[17rem] sm:w-[19rem] md:w-[18rem] rounded-xl  mx-auto mt-5 ">
         <button
-          onClick={() => handleToggler("DEALS")}
+          onClick={() => dispatch({ type: "DEALS" })}
           className=" rounded-xl font-bold text-base py-3"
         >
           DEALS
         </button>
         <button
-          onClick={() => handleToggler("GERENOVEERD")}
+          onClick={() => dispatch({ type: "GERENOVEERD" })}
           className="bg-primary-black text-primary-yellow rounded-xl font-bold text-base py-3"
         >
           GERENOVEERD
         </button>
       </div>
-      <p className="w-[17rem] sm:w-[30rem] md:w-full mx-auto sm:px-8 text-center font-medium text-primary-black mt-9">
+      <p className="w-[17rem] sm:w-[30rem] md:w-full mx-auto sm:px-8 text-center text-primary-black mt-9 font-roboto">
         Ontdek bij Extrema Deals onze exclusieve selectie van gerenoveerde
         items. Elk stuk is deskundig hersteld en vernieuwd, waarbij de
         oorspronkelijke charme behouden blijft. Van vintage vondsten en antieke
@@ -60,7 +70,7 @@ export default function DealsSidebar() {
         collectie biedt kwaliteit en uniciteit. Verras jezelf met iets speciaals
         dat zowel duurzaam als stijlvol is.
       </p>
-      <hr className="border-2 border-primary-gray w-[30%] sm:w-[10rem] md:w-[9rem] mx-auto mt-5" />
+      <hr className="border-2 border-[#272A2F] w-[30%] sm:w-[10rem] md:w-[9rem] mx-auto mt-5" />
       <div className="w-fit mx-auto mt-8 ">
         <div
           style={{ boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)" }}
@@ -129,6 +139,23 @@ export default function DealsSidebar() {
             </ul>
           </div>
         </div>
+      </div>
+      <div className="mt-10 w-[17rem] sm:w-[19rem] md:w-[18.75rem] mx-auto text-primary-white flex  flex-wrap gap-x-2 gap-y-5">
+        {bubbles.map((item) => (
+          <div
+            key={item.id}
+            style={{ boxShadow: "0px 6px 6px 0px rgba(0, 0, 0, 0.25)" }}
+            className="max-w-1/2 flex items-center gap-x-2 bg-secondary-black py-2 rounded-xl pl-4 pr-2 font-semibold font-roboto justify-between text-[12px] md:text-sm "
+          >
+            <span className="cursor-pointer">{item.name}</span>
+            <span
+              onClick={() => bubbleRemoveHandler(item.id)}
+              className="cursor-pointer"
+            >
+              <AiFillCloseCircle className="text-xl md:text-2xl" />
+            </span>
+          </div>
+        ))}
       </div>
 
       <div className="bg-[#272A2FE5] w-[17rem] mx-auto mt-8 rounded-3xl py-8 sm:w-[19rem] md:w-[18rem] pr-10 sm:h-[35rem]">

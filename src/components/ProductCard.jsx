@@ -34,38 +34,40 @@ export default function ProductCard() {
           </div>
           <div className="contents pt-10">
             <table className="w-full text-left">
-              <tr>
-                <th>Width</th>
-                <th>Height</th>
-              </tr>
-              <tr>
-                <td>3000mm</td>
-                <td>4000mm</td>
-              </tr>
-              <tr>
-                <th>Something</th>
-                <th>Something</th>
-              </tr>
-              <tr>
-                <td>200mm</td>
-                <td>200mm</td>
-              </tr>
-              <tr>
-                <th>Something</th>
-                <th>Something</th>
-              </tr>
-              <tr>
-                <td>200mm</td>
-                <td>200mm</td>
-              </tr>
-              <tr>
-                <th>Something</th>
-                <th>Something</th>
-              </tr>
-              <tr>
-                <td>200mm</td>
-                <td>200mm</td>
-              </tr>
+              <tbody>
+                <tr>
+                  <th>Width</th>
+                  <th>Height</th>
+                </tr>
+                <tr>
+                  <td>3000mm</td>
+                  <td>4000mm</td>
+                </tr>
+                <tr>
+                  <th>Something</th>
+                  <th>Something</th>
+                </tr>
+                <tr>
+                  <td>200mm</td>
+                  <td>200mm</td>
+                </tr>
+                <tr>
+                  <th>Something</th>
+                  <th>Something</th>
+                </tr>
+                <tr>
+                  <td>200mm</td>
+                  <td>200mm</td>
+                </tr>
+                <tr>
+                  <th>Something</th>
+                  <th>Something</th>
+                </tr>
+                <tr>
+                  <td>200mm</td>
+                  <td>200mm</td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </div>

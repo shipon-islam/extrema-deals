@@ -46,7 +46,7 @@ export default function SliderProduct() {
     ],
   };
   return (
-    <div>
+    <div className="slick-opacity">
       <Slider {...settings}>
         {[...Array(12).keys()].map((item) => (
           <ProductCard key={item} />

@@ -1,6 +1,6 @@
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import ContextProvider from "./hook/ContextProvider";
+import ContextProvider from "./context/ContextProvider";
 import RoutesControler from "./routes/RoutesControler";
 
 export default function App() {

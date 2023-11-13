@@ -2,11 +2,11 @@ import { useRef } from "react";
 import { BiSearch } from "react-icons/bi";
 import { IoIosArrowDown } from "react-icons/io";
 import { categories } from "../constant";
-import { UseToggleContext } from "../hook/ContextProvider";
+import { UseToggleContext } from "../context/ContextProvider";
 
 export default function DealsSidebar() {
   const selectRef = useRef(null);
-  const { handleToggler } = UseToggleContext();
+  const { dispatch } = UseToggleContext();
   const handleCategoryChange = (e) => {
     const isChecked = e.target.checked;
     const categoryParent = e.target.parentElement;
@@ -40,26 +40,26 @@ export default function DealsSidebar() {
     <div className="bg-primary-yellow py-10">
       <div className="bg-primary-white grid grid-cols-2 w-[17rem] sm:w-[19rem] md:w-[18rem] rounded-xl  mx-auto mt-5 ">
         <button
-          onClick={() => handleToggler("DEALS")}
+          onClick={() => dispatch({ type: "DEALS" })}
           className="bg-primary-black text-primary-yellow rounded-xl font-bold text-base py-3"
         >
           DEALS
         </button>
         <button
-          onClick={() => handleToggler("GERENOVEERD")}
+          onClick={() => dispatch({ type: "GERENOVEERD" })}
           className="rounded-xl font-bold text-base py-3"
         >
           GERENOVEERD
         </button>
       </div>
-      <p className="w-[17rem] sm:w-[30rem] md:w-full mx-auto sm:px-8 text-center font-medium text-primary-black mt-9">
+      <p className="w-[17rem] sm:w-[30rem] md:w-full mx-auto sm:px-8 text-center font-roboto text-primary-black mt-9">
         Ontdek onze zorgvuldig geselecteerde collectie van diverse items,
         perfect bewaard in hun originele staat. Van alledaagse items tot unieke
         vondsten, Extrema Deals heeft iets voor iedereen. Laat je verrassen door
         wat we te bieden hebben en vind precies wat je zoekt, of misschien iets
         dat je nog niet wist dat je nodig had.
       </p>
-      <hr className="border-2 border-primary-gray w-[30%] sm:w-[10rem] md:w-[9rem] mx-auto mt-5" />
+      <hr className="border-2 border-[#272A2F] w-[30%] sm:w-[10rem] md:w-[9rem] mx-auto mt-5" />
       <div className="w-fit mx-auto mt-8 ">
         <div
           style={{ boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)" }}

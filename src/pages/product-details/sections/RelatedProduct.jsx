@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
@@ -47,15 +48,17 @@ export default function RelatedProduct() {
       className=" py-16"
     >
       <div className="container">
-        <h1 className="text-primary-white font-bold text-xl py-4">
-          ANDEREN KEKEN OOK NAAR
+        <h1 className="text-primary-white font-bold text-xl py-4 hover:text-primary-yellow hover:underline">
+          <Link to="/deals/product-filter">ANDEREN KEKEN OOK NAAR</Link>
         </h1>
       </div>
-      <Slider {...settings}>
-        {[...Array(12).keys()].map((item) => (
-          <ProductCard key={item} />
-        ))}
-      </Slider>
+      <div className="slick-opacity">
+        <Slider {...settings}>
+          {[...Array(12).keys()].map((item) => (
+            <ProductCard key={item} />
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 }

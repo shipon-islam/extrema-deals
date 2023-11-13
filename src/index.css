@@ -45,6 +45,9 @@
   .input-class {
     @apply border-2 border-primary-yellow mt-4 lg:mt-6 w-full h-10 rounded-xl focus:outline-none pl-4 py-1 shadow-lg shadow-black/20 text-black;
   }
+  .slick-opacity {
+    @apply relative before:content-[''] before:w-[3rem] before:h-[24rem] before:bg-secondary-black/40 before:absolute before:z-[5] before:top-1/2 before:translate-y-[-50%] before:left-0 before:shadow-xl before:shadow-secondary-black before:rounded-r-xl after:content-[''] after:w-[2.7rem] after:h-[24rem] after:bg-secondary-black/40 after:absolute after:z-[5] after:top-1/2 after:translate-y-[-50%] after:right-0 after:shadow-xl after:shadow-secondary-black after:rounded-l-xl;
+  }
 }
 .hero-banner {
   background: linear-gradient(

@@ -1,5 +1,12 @@
 import camera1 from "../assets/img/camera1.png";
 import camera2 from "../assets/img/camera2.png";
+export const bubblesApi = [
+  { id: 101, name: "Meubilair" },
+  { id: 102, name: "Verzamelobjecten" },
+  { id: 103, name: "Buiten en Tuin" },
+  { id: 104, name: "Kunst" },
+  { id: 105, name: "Kasten" },
+];
 
 export const product_images = [
   { id: 1, url: camera1 },

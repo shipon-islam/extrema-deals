@@ -57,11 +57,13 @@ export default function SmFilterProduct() {
           DEALS: MEUBILAIR - STOELEN
         </h1>
       </div>
-      <Slider {...settings}>
-        {[...Array(12).keys()].map((item) => (
-          <ProductCard key={item} />
-        ))}
-      </Slider>
+      <div className="slick-opacity">
+        <Slider {...settings}>
+          {[...Array(12).keys()].map((item) => (
+            <ProductCard key={item} />
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 }
