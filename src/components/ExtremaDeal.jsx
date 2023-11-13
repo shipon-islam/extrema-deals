@@ -6,14 +6,15 @@ import blackWhatsapp from "../assets/svg/whatsapp-icon-black-gradient.svg";
 import GradientWhatsappIcon from "../assets/svg/whatsapp-icon-yellow-gradient.svg";
 export default function ExtremaDeal() {
   return (
-    <div className="md:mt-1 pl-10 pt-8 md:pl-0 md:pt-0">
-      <h3 className="font-bold text-xl mb-9 md:mb-6 text-primary-yellow md:text-primary-black">
+    <div className="md:mt-1 pl-10 pt-8 md:pl-0 md:pt-0 ">
+      <h3 className="font-bold text-xl mb-9 md:mb-6 text-primary-yellow md:text-primary-black font-raleway">
         EXTREMA DEALS
       </h3>
-      <ul className="space-y-10 md:space-y-6 md:text-secondary-black">
+      <ul className="space-y-10 md:space-y-6 md:text-secondary-black font-roboto">
         <li>
           <a
-            href="https://www.google.com/maps?q=zutendaal,belgium"
+            href="https://maps.app.goo.gl/SrXzzXR5AWf5gS4B7"
+            target="blank"
             className="flex items-center gap-2 md:hover:text-gray-600 transition-colors duration-200"
           >
             <img
@@ -27,8 +28,9 @@ export default function ExtremaDeal() {
               alt="icon"
             />
             <p>
-              Zevenputtenstraat 7, 3690 <br />
-              Zutendaal, Limburg Belgie
+              Zevenputtenstraat 7 bus 5,
+              <br />
+              3690 Zutendaal, Limburg Belgie
             </p>
           </a>
         </li>

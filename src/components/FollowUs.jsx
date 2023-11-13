@@ -12,7 +12,8 @@ export default function FollowUs() {
       <ul className="space-y-8 md:space-y-6 md:text-secondary-black">
         <li>
           <a
-            href="#"
+            href="https://www.facebook.com/extremadeals/"
+            target="blank"
             className="flex items-center gap-2 md:hover:text-gray-600 transition-colors duration-200"
           >
             <img
@@ -31,7 +32,8 @@ export default function FollowUs() {
         </li>
         <li>
           <a
-            href="#"
+            href="https://www.instagram.com/extrema_deals/"
+            target="blank"
             className="flex items-center gap-2 md:hover:text-gray-600 transition-colors duration-200"
           >
             <img

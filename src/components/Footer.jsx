@@ -23,7 +23,7 @@ export default function Footer() {
               />
             </Link>
             <div className="flex gap-4 items-end">
-              <a href="#" target="blank">
+              <a href="https://www.facebook.com/extremadeals/" target="blank">
                 <svg
                   className="w-[30px] md:w-[35px] h-[35px]  hover:scale-90 transition-transform duration-300"
                   width="45"
@@ -51,7 +51,7 @@ export default function Footer() {
                   </defs>
                 </svg>
               </a>
-              <a href="#" target="blank">
+              <a href="https://www.instagram.com/extrema_deals/" target="blank">
                 <svg
                   className="w-[30px] md:w-[35px] h-[35px] hover:scale-90 transition-transform duration-300"
                   width="45"
@@ -89,7 +89,7 @@ export default function Footer() {
               <ul className="text-sm lg:text-base  space-y-5 md:space-y-6">
                 <li>
                   <a
-                    href="https://maps.app.goo.gl/ruSjMza4feecABnj9"
+                    href="https://maps.app.goo.gl/SrXzzXR5AWf5gS4B7"
                     className="flex items-center gap-2 hover:text-primary-yellow"
                     target="blank"
                   >
@@ -99,8 +99,9 @@ export default function Footer() {
                       alt="icon"
                     />
                     <p>
-                      Zevenputtenstraat 7, 3690 <br />
-                      Zutendaal, Limburg Belgie
+                      Zevenputtenstraat 7 bus 5,
+                      <br />
+                      3690 Zutendaal, Limburg Belgie
                     </p>
                   </a>
                 </li>

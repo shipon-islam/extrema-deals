@@ -66,12 +66,12 @@ export const FAQ_Api = [
   {
     id: 4,
     ques: "Bieden jullie een leveringsservice aan? ",
-    ans: "Op dit moment bieden we geen leveringsdiensten aan. Alle aankopen dienen persoonlijk te worden opgehaald in onze hal. We raden klanten aan om van tevoren passend vervoer te regelen om hun aankopen veilig mee naar huis te nemen.",
+    ans: "Ja, wij bieden een leveringsservice aan, afhankelijk van het product en tegen een vergoeding. Neem hiervoor contact met ons op tijdens onze openingsuren via telefoon of stuur een bericht via WhatsApp. Voor klanten die ervoor kiezen hun aankopen zelf op te halen, raden we aan om van tevoren passend vervoer te regelen om hun aankopen veilig mee naar huis te nemen.",
   },
   {
     id: 5,
     ques: "Wat zijn de geaccepteerde betalingsmethoden?",
-    ans: "Wij accepteren momenteel contante betalingen en betalingen via Bancontact bij afhaling.",
+    ans: "Momenteel kunt u bij afhaling betalen met contant geld en Bancontact. U heeft ook de mogelijkheid om via overschrijving te betalen.",
   },
   {
     id: 6,
@@ -97,5 +97,58 @@ export const FAQ_Api = [
     id: 10,
     ques: "Hoe bepalen jullie de kostprijs van een ontruiming?",
     ans: "De kostprijs voor een ontruiming wordt bepaald door de grootte en staat van het pand, evenals het volume en de aard van de inboedel.",
+  },
+];
+
+export const categories = [
+  {
+    id: 1,
+    category: "Meubilair",
+    subcategories: ["Stoelen", "Tafels", "Kasten", "Bureaus"],
+  },
+  {
+    id: 2,
+    category: "Elektronica",
+    subcategories: ["Stoelen", "Tafels", "Kasten", "Bureaus"],
+  },
+  {
+    id: 3,
+    category: "Buiten & Tuin",
+    subcategories: [],
+  },
+  {
+    id: 4,
+    category: "Verzamelobjecten",
+    subcategories: [],
+  },
+  {
+    id: 5,
+    category: "Kunst",
+    subcategories: ["Sprite", "Fanta", "Cola", "Red Bull"],
+  },
+  {
+    id: 6,
+    category: "Voertuigen",
+    subcategories: [],
+  },
+  {
+    id: 7,
+    category: "Retro",
+    subcategories: [],
+  },
+  {
+    id: 8,
+    category: "Antiek",
+    subcategories: [],
+  },
+  {
+    id: 9,
+    category: "Vintage",
+    subcategories: [],
+  },
+  {
+    id: 10,
+    category: "Food & drinks",
+    subcategories: ["Sprite", "Fanta", "Cola", "Red Bull"],
   },
 ];
