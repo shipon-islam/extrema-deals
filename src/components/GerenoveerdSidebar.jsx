@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { BiSearch } from "react-icons/bi";
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { bubblesApi, categories } from "../constant";
 import { UseToggleContext } from "../context/ContextProvider";
 
@@ -37,13 +37,20 @@ export default function DealsSidebar() {
   };
   const handleArrowBtn = (e) => {
     const subCategory = e.currentTarget.parentElement.nextElementSibling;
-    console.log(subCategory);
     subCategory.classList.toggle("hidden");
   };
-  const handleSortlist = (e) => {
+  const selectHandler = ({ currentTarget }) => {
     selectRef.current.classList.toggle("hidden");
+    currentTarget.firstChild.classList.toggle("hidden");
+    currentTarget.lastChild.classList.toggle("hidden");
+  };
+  const handleSortlist = (e) => {
     const parentElement = e.target.parentElement.parentElement;
     parentElement.firstChild.innerText = e.target.innerText;
+    const selectBtn = parentElement.children[1];
+    selectBtn.firstChild.classList.toggle("hidden");
+    selectBtn.lastChild.classList.toggle("hidden");
+    selectRef.current.classList.toggle("hidden");
   };
 
   return (
@@ -81,12 +88,7 @@ export default function DealsSidebar() {
             type="search"
             placeholder="Zoek"
           />
-          <button
-            style={{
-              background: "linear-gradient(180deg, #272A2F 0%, #0E1012 100%)",
-            }}
-            className="h-full block bg-primary-black px-[0.6rem] text-primary-yellow"
-          >
+          <button className="h-full block bg-gradient-to-b from-primary-gray to-primary-black hover:from-primary-gray hover:to-primary-gray px-[0.6rem] text-primary-yellow">
             <BiSearch className="text-2xl" />
           </button>
         </div>
@@ -100,13 +102,11 @@ export default function DealsSidebar() {
               Sorteer op...
             </span>
             <button
-              style={{
-                background: "linear-gradient(180deg, #272A2F 0%, #0E1012 100%)",
-              }}
-              onClick={() => selectRef.current.classList.toggle("hidden")}
-              className="h-full block  px-2 text-primary-yellow"
+              onClick={selectHandler}
+              className="h-full block  px-2 text-primary-yellow bg-gradient-to-b from-primary-gray to-primary-black hover:from-primary-gray hover:to-primary-gray"
             >
-              <IoIosArrowDown className="inline-block text-2xl" />
+              <IoIosArrowDown className="text-2xl" />
+              <IoIosArrowUp className="text-2xl hidden" />
             </button>
             <ul
               ref={selectRef}

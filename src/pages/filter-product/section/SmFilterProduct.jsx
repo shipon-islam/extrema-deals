@@ -12,8 +12,8 @@ export default function SmFilterProduct() {
     centerMode: true,
     slidesToShow: 5,
     speed: 300,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+    nextArrow: <PrevArrow />,
+    prevArrow: <NextArrow />,
     responsive: [
       {
         breakpoint: 430,

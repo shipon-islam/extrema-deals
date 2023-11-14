@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
@@ -11,8 +10,8 @@ export default function RelatedProduct() {
     centerMode: true,
     slidesToShow: 5,
     speed: 300,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+    nextArrow: <PrevArrow />,
+    prevArrow: <NextArrow />,
     responsive: [
       {
         breakpoint: 430,
@@ -49,7 +48,7 @@ export default function RelatedProduct() {
     >
       <div className="container">
         <h1 className="text-primary-white font-bold text-xl py-4 hover:text-primary-yellow hover:underline">
-          <Link to="/deals/product-filter">ANDEREN KEKEN OOK NAAR</Link>
+          ANDEREN KEKEN OOK NAAR
         </h1>
       </div>
       <div className="slick-opacity">

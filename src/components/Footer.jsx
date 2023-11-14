@@ -133,7 +133,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="mailto:info@extremadeals.com"
+                    href="mailto:contact@extremadeals.com"
                     className="flex items-center gap-2 hover:text-primary-yellow"
                   >
                     <img
@@ -141,7 +141,7 @@ export default function Footer() {
                       src={mailIcon}
                       alt="icon"
                     />
-                    <p>info@extremadeals.com</p>
+                    <p>contact@extremadeals.com</p>
                   </a>
                 </li>
               </ul>

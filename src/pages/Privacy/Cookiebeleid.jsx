@@ -127,9 +127,9 @@ export default function Cookiebeleid() {
               opnemen via{" "}
               <a
                 className="font-bold underline hover:text-secondary-black"
-                href="mailto:info@extremadeals.com"
+                href="mailto:contact@extremadeals.com"
               >
-                info@extremadeals.com
+                contact@extremadeals.com
               </a>
               .
             </p>

@@ -47,7 +47,7 @@ function ProductSlider({ productImages }) {
     <section className="relative bg-[#1D1C1C]">
       <div className="absolute top-10 md:top-16 lg:top-20 flex justify-between w-full z-10 container left-1/2 translate-x-[-50%]">
         <Link
-          className="bg-gradient-to-b from-secondary-yellow to-primary-yellow hover:from-secondary-yellow hover:to-secondary-yellow flex gap-x-2 items-center md:py-1 px-2 md:px-4 rounded-sm text-primary-black"
+          className="bg-gradient-to-l from-secondary-yellow to-primary-yellow hover:from-primary-yellow hover:to-secondary-yellow flex gap-x-2 items-center md:py-1 px-2 md:px-4 rounded-sm text-primary-black"
           to="/deals"
         >
           <span className="font-bold text-[10px] md:text-base">GA TERUG</span>

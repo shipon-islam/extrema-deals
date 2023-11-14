@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { BiSearch } from "react-icons/bi";
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { categories } from "../constant";
 import { UseToggleContext } from "../context/ContextProvider";
 
@@ -30,10 +30,18 @@ export default function DealsSidebar() {
     console.log(subCategory);
     subCategory.classList.toggle("hidden");
   };
-  const handleSortlist = (e) => {
+  const selectHandler = ({ currentTarget }) => {
     selectRef.current.classList.toggle("hidden");
+    currentTarget.firstChild.classList.toggle("hidden");
+    currentTarget.lastChild.classList.toggle("hidden");
+  };
+  const handleSortlist = (e) => {
     const parentElement = e.target.parentElement.parentElement;
     parentElement.firstChild.innerText = e.target.innerText;
+    const selectBtn = parentElement.children[1];
+    selectBtn.firstChild.classList.toggle("hidden");
+    selectBtn.lastChild.classList.toggle("hidden");
+    selectRef.current.classList.toggle("hidden");
   };
 
   return (
@@ -70,12 +78,7 @@ export default function DealsSidebar() {
             type="search"
             placeholder="Zoek"
           />
-          <button
-            style={{
-              background: "linear-gradient(180deg, #272A2F 0%, #0E1012 100%)",
-            }}
-            className="h-full block bg-primary-black px-[0.6rem] text-primary-yellow"
-          >
+          <button className="h-full block bg-gradient-to-b from-primary-gray to-primary-black hover:from-primary-gray hover:to-primary-gray px-[0.6rem] text-primary-yellow">
             <BiSearch className="text-2xl" />
           </button>
         </div>
@@ -89,13 +92,11 @@ export default function DealsSidebar() {
               Sorteer op...
             </span>
             <button
-              style={{
-                background: "linear-gradient(180deg, #272A2F 0%, #0E1012 100%)",
-              }}
-              onClick={() => selectRef.current.classList.toggle("hidden")}
-              className="h-full block  px-2 text-primary-yellow"
+              onClick={selectHandler}
+              className="h-full block bg-gradient-to-b from-primary-gray to-primary-black hover:from-primary-gray hover:to-primary-gray  px-2 text-primary-yellow "
             >
-              <IoIosArrowDown className="inline-block text-2xl" />
+              <IoIosArrowDown className="text-2xl" />
+              <IoIosArrowUp className="text-2xl hidden" />
             </button>
             <ul
               ref={selectRef}
@@ -130,8 +131,8 @@ export default function DealsSidebar() {
         </div>
       </div>
 
-      <div className="bg-[#272A2FE5] w-[17rem] mx-auto mt-8 rounded-3xl py-8 sm:w-[19rem] md:w-[18rem] pr-10 sm:h-[35rem]">
-        <div className="px-8 h-[20rem]  overflow-y-scroll sidebar-scroll">
+      <div className="bg-[#272A2FE5] w-[17rem] mx-auto mt-8 rounded-3xl py-8 sm:w-[19rem] md:w-[18rem] pr-10 h-[20rem] sm:h-[35rem]">
+        <div className="px-8 h-[15rem] sm:h-[20rem]  overflow-y-scroll sidebar-scroll">
           <h1 className="text-primary-white font-bold text-lg ">CATEGORIEËN</h1>
           <ul className="font-roboto mt-3 ">
             {categories.map((cat) => (

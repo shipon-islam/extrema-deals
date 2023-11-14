@@ -72,7 +72,7 @@ export default function ExtremaDeal() {
         </li>
         <li>
           <a
-            href="mailto:info@extremadeals.com"
+            href="mailto:contact@extremadeals.com"
             className="flex items-center gap-2 md:hover:text-gray-600 transition-colors duration-200"
           >
             <img
@@ -85,7 +85,7 @@ export default function ExtremaDeal() {
               src={GradientMailIcon}
               alt="icon"
             />
-            <p>info@extremadeals.com</p>
+            <p>contact@extremadeals.com</p>
           </a>
         </li>
       </ul>

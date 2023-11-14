@@ -55,7 +55,7 @@
       rgba(31, 34, 40, 0.5),
       rgba(31, 34, 40, 0.5)
     ),
-    url("./assets/img/homebanner-placeholder.png");
+    url("./assets/img/home-banner.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -67,7 +67,7 @@
       rgba(31, 34, 40, 0.5),
       rgba(31, 34, 40, 0.5)
     ),
-    url("./assets/img/dienstenbanner-placeholder.png");
+    url("./assets/img/diensten-banner.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
