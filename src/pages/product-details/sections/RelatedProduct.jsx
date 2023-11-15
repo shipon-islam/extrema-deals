@@ -10,8 +10,8 @@ export default function RelatedProduct() {
     centerMode: true,
     slidesToShow: 5,
     speed: 300,
-    nextArrow: <PrevArrow />,
-    prevArrow: <NextArrow />,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 430,

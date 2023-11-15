@@ -10,8 +10,8 @@ export default function SliderProduct() {
     centerMode: true,
     slidesToShow: 4,
     speed: 300,
-    nextArrow: <PrevArrow />,
-    prevArrow: <NextArrow />,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 550,
